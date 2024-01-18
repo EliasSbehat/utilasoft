@@ -1,0 +1,1152 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./../assets/libraries/bootstrap-5.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./../assets/libraries/apexcharts/apexcharts.css">
+    <link rel="stylesheet" href="./../assets/app.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<header class="m-4 fixed-top">
+    <div class="m-1">
+        <nav class="navbar navbar-expand-lg bg-white rounded-3 shadow-custom px-4 py-0">
+            <div class="container-fluid justify-content-between px-1">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./../assets/icons/logo.svg" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavAltMarkup"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse flex-grow-0 text-20" id="navbarNavAltMarkup">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active me-5">
+                            <a class="nav-link" aria-current="page" href="./index.html">Projects</a>
+                        </li>
+                        <li class="nav-item dropdown me-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">Support</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"></a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown me-5">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">Configurations</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#"></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown d-flex">
+                    <img src="./../assets/images/user-avatar.png" alt="" width="50" height="50" class="me-2">
+                    <div class="ms-1 nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                         aria-expanded="false">
+                        <div class="fw-semibold mb-1">Admin User</div>
+                        <div class="fw-light text-14">My Account</div>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</header>
+<main class="px-4 mb-5" id="projectDetail">
+    <div class="container-fluid p-1">
+        <div class="d-flex justify-content-between">
+            <nav class="breadcrumb-nav" aria-label="breadcrumb">
+                <ol class="breadcrumb align-items-center">
+                    <li class="breadcrumb-item">
+                        <a href="./index.html">
+                            <img src="./../assets/images/project1-bottom.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="#" class="text-32 fw-semibold text-body text-decoration-none">Design</a>
+                    </li>
+                    <li class="breadcrumb-item"><a href="#" class="text-32 fw-semibold text-body text-decoration-none">Jumporee</a>
+                    </li>
+                </ol>
+            </nav>
+        </div>
+        <nav>
+            <div class="nav nav-tabs" id="project-tab" role="tablist">
+                <button class="nav-link active text-22" id="nav-overview-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-overview" type="button" role="tab" aria-controls="nav-overview"
+                        aria-selected="true">Overview
+                </button>
+                <button class="nav-link text-22" id="nav-activity-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-activity"
+                        type="button" role="tab" aria-controls="nav-activity" aria-selected="false">Activity
+                </button>
+                <button class="nav-link text-22" id="nav-discussion-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-discussion"
+                        type="button" role="tab" aria-controls="nav-discussion" aria-selected="false">Discussion
+                </button>
+                <button class="nav-link text-22" id="nav-schedule-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-schedule"
+                        type="button" role="tab" aria-controls="nav-schedule" aria-selected="false">Schedule
+                </button>
+                <button class="nav-link text-22" id="nav-meeting-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-meeting"
+                        type="button" role="tab" aria-controls="nav-meeting" aria-selected="false">Meeting
+                </button>
+                <button class="nav-link text-22" id="nav-tasks-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-tasks"
+                        type="button" role="tab" aria-controls="nav-tasks" aria-selected="false">Tasks
+                </button>
+                <button class="nav-link text-22" id="nav-feedback-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-feedback"
+                        type="button" role="tab" aria-controls="nav-feedback" aria-selected="false">Feedback
+                </button>
+                <button class="nav-link text-22" id="nav-updates-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-updates"
+                        type="button" role="tab" aria-controls="nav-updates" aria-selected="false">Updates
+                </button>
+                <button class="nav-link text-22" id="nav-requests-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-requests"
+                        type="button" role="tab" aria-controls="nav-requests" aria-selected="false">Requests
+                </button>
+                <button class="nav-link text-22" id="nav-files-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-files"
+                        type="button" role="tab" aria-controls="nav-files" aria-selected="false">Updates
+                </button>
+                <button class="nav-link text-22" id="nav-team-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-team"
+                        type="button" role="tab" aria-controls="nav-team" aria-selected="false">Team
+                </button>
+                <button class="nav-link text-22" id="nav-contract-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-contract"
+                        type="button" role="tab" aria-controls="nav-contract" aria-selected="false">Contract
+                </button>
+            </div>
+        </nav>
+        <div class="py-3 mb-2"></div>
+        <div class="tab-content text-body" id="project-tabContent">
+            <div class="tab-pane fade show active" id="nav-overview" role="tabpanel" aria-labelledby="nav-overview-tab"
+                 tabindex="0">
+                <div class="d-grid" id="clientProjectOverviewGrid">
+                    <div class="me-4 d-grid grid-rows-3-1">
+                        <div class="d-grid" id="clientProjectOverviewSubGrid">
+                            <div class="rounded-2 shadow-custom p-4 bg-white me-3">
+                                <div class="p-1">
+                                    <div class="text-22 fw-semibold">Project name: <span class="text-26">Jumporee</span>
+                                    </div>
+                                    <div class="mb-4 pt-1"></div>
+                                    <div class="text-22 fw-semibold mb-2">Project Description</div>
+                                    <div class="text-18">We are looking to create a website design that we can then
+                                        deploy
+                                        into a shopify store or something like that.
+                                    </div>
+                                    <div class="mb-3 pt-1"></div>
+                                    <div class="text-22 fw-semibold mb-2">Important Dates</div>
+                                    <div class="text-18 mb-1">1/20/24&nbsp;&nbsp;Project Complete</div>
+                                    <div class="text-18">1/3/24&nbsp;&nbsp;&nbsp;&nbsp;Project Launch</div>
+                                </div>
+                            </div>
+                            <div class="rounded-2 shadow-custom p-4 text-body bg-white ms-1">
+                                <div class="p-1">
+                                    <div class="text-22 fw-semibold">Notification</div>
+                                    <div class="mb-3 pt-1"></div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle bg-primary bg-opacity-8 d-flex justify-content-center align-items-center me-3  wh-50">
+                                            <div class="fw-medium text-primary fw-medium text-24">3</div>
+                                        </div>
+                                        <div class="text-18 fw-semibold text-body">Tasks Complete</div>
+                                    </div>
+                                    <div class="mb-2 pt-1"></div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle bg-primary bg-opacity-8 d-flex justify-content-center align-items-center me-3 wh-50">
+                                            <div class="fw-medium text-primary fw-medium text-24">1</div>
+                                        </div>
+                                        <div class="text-18 fw-semibold text-body">Updates</div>
+                                    </div>
+                                    <div class="mb-2 pt-1"></div>
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="rounded-circle bg-primary bg-opacity-8 d-flex justify-content-center align-items-center me-3 wh-50">
+                                            <div class="fw-medium text-primary fw-medium text-24">4</div>
+                                        </div>
+                                        <div class="text-18 fw-semibold text-body">Requests</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-2 bg-white shadow-custom p-4 text-body">
+                            <div class="p-2 d-flex align-items-center">
+                                <div class="text-22 fw-semibold me-5">Important Links</div>
+                                <div class="border-primary rounded-1 px-4 py-3 fw-semibold text-primary me-4 border w-190 text-center"
+                                     role="button">Upwork Contract
+                                </div>
+                                <div class="border-primary rounded-1 px-4 py-3 fw-semibold text-primary ms-1 me-4 border w-190 text-center"
+                                     role="button">
+                                    Frontend
+                                </div>
+                                <div class="border-primary rounded-1 px-4 py-3 fw-semibold text-primary ms-1 me-4 border w-190 text-center"
+                                     role="button">
+                                    Backend
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-custom rounded-2 p-3">
+                        <div class="p-1">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div class="fw-semibold text-24">Recent Activity</div>
+                                <a class="text-primary fw-medium text-18" href="#">See All</a>
+                            </div>
+                            <div class="border-bottom border-secondary"></div>
+                            <div class="py-4 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-semibold text-18 mb-1">Updated menu</div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="custom-icon-project-recent-activity-hour me-2"></i>
+                                        <div class="fw-medium text-20 text-8A8A8A">38h</div>
+                                    </div>
+                                </div>
+                                <div class="bg-primary rounded-1 py-1 px-3 text-white fw-medium">Task</div>
+                            </div>
+                            <div class="border-bottom border-secondary"></div>
+                            <div class="py-4 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-semibold text-18 mb-1">Please review the story section</div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="custom-icon-project-recent-activity-hour me-2"></i>
+                                        <div class="fw-medium text-20 text-8A8A8A">38h</div>
+                                    </div>
+                                </div>
+                                <div class="bg-primary rounded-1 py-1 px-3 text-white fw-medium">Feedback</div>
+                            </div>
+                            <div class="border-bottom border-secondary"></div>
+                            <div class="py-4 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-semibold text-18 mb-1">Launch</div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="custom-icon-project-recent-activity-hour me-2"></i>
+                                        <div class="fw-medium text-20 text-8A8A8A">38h</div>
+                                    </div>
+                                </div>
+                                <div class="bg-primary rounded-1 py-1 px-3 text-white fw-medium">Updates</div>
+                            </div>
+                            <div class="border-bottom border-secondary"></div>
+                            <div class="pt-4 d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="fw-semibold text-18 mb-1">Need excel sheet</div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="custom-icon-project-recent-activity-hour me-2"></i>
+                                        <div class="fw-medium text-20 text-8A8A8A">38h</div>
+                                    </div>
+                                </div>
+                                <div class="bg-primary rounded-1 py-1 px-3 text-white fw-medium">Requests</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-activity" role="tabpanel" aria-labelledby="nav-activity-tab"
+                 tabindex="0">
+                <div class="bg-white shadow-custom rounded-2 p-3">
+                    <div class="p-1">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <div class="fw-semibold text-24">Recent Activity</div>
+                            <a class="text-primary fw-medium text-18" href="#">See All</a>
+                        </div>
+                        <div class="border-bottom border-secondary"></div>
+                        <div class="py-4 d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="fw-semibold text-18 mb-1">Updated menu</div>
+                                <div class="d-flex align-items-center">
+                                    <i class="custom-icon-project-recent-activity-hour me-2"></i>
+                                    <div class="fw-medium text-20 text-8A8A8A">38h</div>
+                                </div>
+                            </div>
+                            <div class="bg-primary rounded-1 py-1 px-3 text-white fw-medium">Task</div>
+                        </div>
+                        <div class="border-bottom border-secondary"></div>
+                        <div class="py-4 d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="fw-semibold text-18 mb-1">Please review the story section</div>
+                                <div class="d-flex align-items-center">
+                                    <i class="custom-icon-project-recent-activity-hour me-2"></i>
+                                    <div class="fw-medium text-20 text-8A8A8A">38h</div>
+                                </div>
+                            </div>
+                            <div class="bg-primary rounded-1 py-1 px-3 text-white fw-medium">Feedback</div>
+                        </div>
+                        <div class="border-bottom border-secondary"></div>
+                        <div class="py-4 d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="fw-semibold text-18 mb-1">Launch</div>
+                                <div class="d-flex align-items-center">
+                                    <i class="custom-icon-project-recent-activity-hour me-2"></i>
+                                    <div class="fw-medium text-20 text-8A8A8A">38h</div>
+                                </div>
+                            </div>
+                            <div class="bg-primary rounded-1 py-1 px-3 text-white fw-medium">Updates</div>
+                        </div>
+                        <div class="border-bottom border-secondary"></div>
+                        <div class="pt-4 d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="fw-semibold text-18 mb-1">Need excel sheet</div>
+                                <div class="d-flex align-items-center">
+                                    <i class="custom-icon-project-recent-activity-hour me-2"></i>
+                                    <div class="fw-medium text-20 text-8A8A8A">38h</div>
+                                </div>
+                            </div>
+                            <div class="bg-primary rounded-1 py-1 px-3 text-white fw-medium">Requests</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-discussion" role="tabpanel"
+                 aria-labelledby="nav-discussion-tab"
+                 tabindex="0">
+                <div class="row">
+                    <div class="col">
+                        <div class="bg-white shadow-custom p-4">
+                            <div class="p-1">
+                                <div class="chat-history">
+                                    <div class="w-100 text-center border-bottom border-secondary2 lh-0 my-2">
+                                        <span class="bg-white px-3 text-secondary2 text-14">Wed, Dec 21</span>
+                                    </div>
+                                    <div class="d-flex justify-content-end align-items-start my-3">
+                                        <div class="rounded-1 bg-secondary3 p-3 me-2 w-500">
+                                            <div class="p-1 text-black lh-lg position-relative">
+                                                Looks like I was able to finish the first floor, Cory swung by and did a
+                                                quick walk through and I shared some details on next steps before he
+                                                left.
+                                                <span class="position-absolute bottom-0 end-0 text-secondary2 text-14">3:32 pm</span>
+                                            </div>
+                                        </div>
+                                        <img src="./../assets/images/discussion-user1.png" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-start align-items-start my-3">
+                                        <img src="./../assets/images/discussion-user2.png" alt="" class="me-2">
+                                        <div class="rounded-1 bg-bg p-3 w-500">
+                                            <div class="p-1 text-black lh-lg position-relative">
+                                                That’s great, also when your there please take a look at the rafters and
+                                                the
+                                                alignment of the stack, I think there might be something in the way.
+                                                <span class="position-absolute bottom-0 end-0 text-secondary2 text-14">3:32 pm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-end align-items-start my-3">
+                                        <div class="rounded-1 bg-secondary3 p-3 me-2 w-500">
+                                            <div class="p-1 text-black lh-lg position-relative">
+                                                Looks like I was able to finish the first floor, Cory swung by and did a
+                                                quick walk through and I shared some details on next steps before he
+                                                left.
+                                                <span class="position-absolute bottom-0 end-0 text-secondary2 text-14">3:32 pm</span>
+                                            </div>
+                                        </div>
+                                        <img src="./../assets/images/discussion-user1.png" alt="">
+                                    </div>
+                                    <div class="d-flex justify-content-start align-items-start my-3">
+                                        <img src="./../assets/images/discussion-user2.png" alt="" class="me-2">
+                                        <div class="rounded-1 bg-bg p-3 w-500">
+                                            <div class="p-1 text-black lh-lg position-relative">
+                                                That’s great, also when your there please take a look at the rafters and
+                                                the
+                                                alignment of the stack, I think there might be something in the way.
+                                                <span class="position-absolute bottom-0 end-0 text-secondary2 text-14">3:32 pm</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-center chat-replies">
+                                        <div class="d-flex justify-content-center border-white border align-items-center rounded-circle bg-warning text-white fw-medium text-12">
+                                            BR
+                                        </div>
+                                        <div class="d-flex justify-content-center border-white border align-items-center rounded-circle bg-primary text-white fw-medium text-12">
+                                            A
+                                        </div>
+                                        <div class="d-flex justify-content-center border-white border align-items-center rounded-circle bg-primary2 text-white fw-medium text-12">
+                                            G
+                                        </div>
+                                        <div class="d-flex justify-content-center border-white border align-items-center rounded-circle bg-success text-white fw-medium text-12">
+                                            E
+                                        </div>
+                                        <div class="d-flex justify-content-center border-white border align-items-center rounded-circle bg-dark2 text-white fw-medium text-12">
+                                            K
+                                        </div>
+                                        <div class="d-flex justify-content-center border-white border align-items-center rounded-circle bg-secondary2 fw-medium text-12 text-dark">
+                                            +4
+                                        </div>
+                                        <div class="text-dark text-12 ms-2 fw-medium">5 replies</div>
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3 mt-5">
+                                    <input type="text" class="form-control border-end-0 border-secondary"
+                                           placeholder="Type message..." aria-label="Type message..."
+                                           aria-describedby="sendChatBtn" id="chatContent">
+                                    <span class="input-group-text border-start-0 bg-white" role="button"
+                                          id="sendChatBtn">
+                                        <i class="custom-icon-chat-send"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="rounded-2 bg-white p-3 shadow-custom">
+                            <div class="py-1 px-3">
+                                <div class="text-26 fw-semibold text-black pb-3 border-bottom border-secondary">Saved
+                                    Conversations
+                                </div>
+                                <div class="py-3"></div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-18 fw-medium text-black">Header</div>
+                                    <div class="border border-body rounded-1 p-3" role="button">
+                                        <div class="px-3 text-body fw-semibold">Load</div>
+                                    </div>
+                                </div>
+                                <div class="py-3"></div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-18 fw-medium text-black">Animation opportunities</div>
+                                    <div class="border border-body rounded-1 p-3" role="button">
+                                        <div class="px-3 text-body fw-semibold">Load</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-schedule" role="tabpanel" aria-labelledby="nav-schedule-tab"
+                 tabindex="0"></div>
+            <div class="tab-pane fade" id="nav-meeting" role="tabpanel" aria-labelledby="nav-meeting-tab"
+                 tabindex="0">
+                <div class="bg-white shadow-custom p-3">
+                    <div class="card-body p-1">
+                        <table class="table">
+                            <thead class="text-22">
+                            <tr>
+                                <th>Date</th>
+                                <th>Attendance</th>
+                                <th>Purpose</th>
+                                <th>Discussion</th>
+                                <th>Results</th>
+                                <th>Results</th>
+                                <th>Recording</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-22">1/4/24</td>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <img src="./../assets/images/approver1.png" alt="">
+                                        <img src="./../assets/images/approver2.png" alt="">
+                                        <img src="./../assets/images/approver3.png" alt="">
+                                    </div>
+                                </td>
+                                <td class="text-22">Scheduled</td>
+                                <td>
+                                    <div class="bg-primary d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Read
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="bg-primary d-inline-block rounded-1 px-3 py-1 text-white fw-medium me-2">
+                                        Task
+                                    </div>
+                                    <div class="bg-primary d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Updates
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="bg-warning d-inline-block rounded-1 px-3 py-1 text-white fw-medium">No
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="bg-secondary-success d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Yes
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-tasks" role="tabpanel" aria-labelledby="nav-tasks-tab"
+                 tabindex="0">
+                <div class="row text-black">
+                    <div class="col">
+                        <div class="bg-white shadow-custom rounded-1 p-4">
+                            <div class="py-1 px-3">
+                                <div class="d-inline-block">
+                                    <div class="rounded-1 border border-secondary d-flex align-items-center ">
+                                        <div class="d-flex align-items-center p-2 border-end border-secondary">
+                                            <i class="custom-icon-task-add1 me-2"></i>
+                                            <div class="text-18 fw-medium text-dark">Add Task</div>
+                                        </div>
+                                        <div class="p-3">
+                                            <i class="custom-icon-chevron-down d-block"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-4 pt-1"></div>
+                                <div class="mb-4 pt-1">
+                                    <table class="table table-bordered text-18 table-hover" id="taskTable">
+                                        <thead>
+                                        <tr>
+                                            <td>Task Name</td>
+                                            <td>Assignee</td>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-chevron-down1 me-3"></i>
+                                                    <div class="text-20 fw-semibold">Planning</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="parent-row" data-id="1" role="button">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-chevron-down1 me-3"></i>
+                                                    <i class="custom-icon-task-checked me-2"></i>
+                                                    <div class="text-14 me-4 flex-1">[READ ME] Instructions for using
+                                                        this
+                                                        project
+                                                    </div>
+                                                    <div class="text-secondary me-2">5</div>
+                                                    <i class="custom-icon-task-tree"></i>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr data-parent-id="1">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <div class="text-14 me-4 flex-1">Rename existing sections and tasks
+                                                        to fit
+                                                        your project needs.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <i class="custom-icon-task-assignee d-block"></i>
+                                            </td>
+                                        </tr>
+                                        <tr data-parent-id="1">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <div class="text-14 me-4 flex-1">Rename existing sections and tasks
+                                                        to fit
+                                                        your project needs.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr data-parent-id="1">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <div class="text-14 me-4 flex-1">Rename existing sections and tasks
+                                                        to fit
+                                                        your project needs.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr data-parent-id="1">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <div class="text-14 me-4 flex-1">Rename existing sections and tasks
+                                                        to fit
+                                                        your project needs.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr data-parent-id="1">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <div class="text-14 me-4 flex-1">Rename existing sections and tasks
+                                                        to fit
+                                                        your project needs.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="d-flex align-items-center" role="button">
+                                                    <i class="custom-icon-task-add me-2"></i>
+                                                    <div class="text-secondary text-14 fw-medium">Add Task...</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="parent-row" data-id="2" role="button">
+                                            <td colspan="2">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-chevron-down1 me-3"></i>
+                                                    <div class="text-20 fw-semibold">Milestones</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-parent-id="2">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-task-checked ms-4 me-2"></i>
+                                                    <div class="text-14 me-4 flex-1">[EXAMPLE TASK] Set up new reporting
+                                                        tools.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr data-parent-id="2">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="custom-icon-task-checked ms-4 me-2"></i>
+                                                    <div class="text-14 me-4 flex-1">[EXAMPLE TASK] Set up new reporting
+                                                        tools.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <div class="d-flex align-items-center" role="button">
+                                                    <i class="custom-icon-task-add me-2"></i>
+                                                    <div class="text-secondary text-14 fw-medium">Add Task...</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="bg-white shadow-custom rouned-1 p-4">
+                            <div class="py-1 px-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-inline-block">
+                                        <div class="rounded-1 border border-secondary d-flex align-items-center ">
+                                            <div class="d-flex align-items-center p-2 border-end border-secondary">
+                                                <i class="custom-icon-task-add1 me-2"></i>
+                                                <div class="text-18 fw-medium text-dark">Mark Complete</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <i class="custom-icon-hand me-4" role="button"></i>
+                                        <i class="custom-icon-attachment me-4" role="button"></i>
+                                        <i class="custom-icon-3-dots" role="button"></i>
+                                    </div>
+                                </div>
+                                <div class="mt-4 pt-1 mb-3 border-bottom border-secondary"></div>
+                                <div class="text-24 fw-medium mb-3">Learn more about how Asana helps product teams
+                                    manage their work
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="text-14 w-200">Assignee</div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="custom-icon-no-assignee me-2"></i>
+                                        <div class="text-14">No assignee</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="text-14 w-200">Due date</div>
+                                    <div class="d-flex align-items-center">
+                                        <i class="custom-icon-due-date me-2"></i>
+                                        <div class="text-14">No due date</div>
+                                    </div>
+                                </div>
+                                <div class="d-flex mb-3">
+                                    <div class="text-14 w-200">Dependencies</div>
+                                    <div>
+                                        <div class="text-14">Add dependencies</div>
+                                    </div>
+                                </div>
+                                <div class="mt-3"></div>
+                                <div class="text-primary" role="button">Show inherited fields</div>
+                                <div class="mt-4 pt-1"></div>
+                                <div class="text-14">Description</div>
+                                <div class="mt-4 pt-1"></div>
+                                <a class="text-primary text-decoration-none"
+                                   href="https://asana.com/teams/product-mangers" target="_blank">https://asana.com/teams/product-mangers</a>
+                                <div class="mt-4 pt-1"></div>
+                                <div class="rounded-1 bg-3666AF0D p-3">
+                                    <div class="p-1 text-53565ACC">
+                                        <div class="d-flex align-items-center">
+                                            <div class="text-14 me-2">Comments</div>
+                                            <i class="custom-icon-chevron-down"></i>
+                                        </div>
+                                        <div class="mt-2 pt-1"></div>
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white text-14 fw-medium wh-36 me-2">
+                                                CA
+                                            </div>
+                                            <div class="fw-bold text-14">Chris Abbott&nbsp;</div>
+                                            <div class="text-14 me-2">created this task.</div>
+                                            <div class="text-12">1 minutes ago</div>
+                                        </div>
+                                        <div class="mt-3 pt-1"></div>
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white text-14 fw-medium wh-36 me-2">
+                                                CA
+                                            </div>
+                                            <div class="flex-1">
+                                                <textarea class="form-control border-0 mb-3 fs-6" rows="6"
+                                                          placeholder="Add a comment" aria-label="comment"></textarea>
+                                                <div class="d-flex align-items-center text-14">
+                                                    <div class="me-2">Collaborators</div>
+                                                    <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white text-14 fw-medium wh-30 me-1">
+                                                        CA
+                                                    </div>
+                                                    <i class="custom-icon-no-assignee wh-30 me-1" role="button"></i>
+                                                    <i class="custom-icon-no-assignee wh-30 me-1" role="button"></i>
+                                                    <i class="custom-icon-collaborator-add me-1 me-auto"
+                                                       role="button"></i>
+                                                    <div role="button" class="d-flex align-items-center">
+                                                        <i class="custom-icon-leave-task me-1"></i>
+                                                        <div class="fw-medium">Leave task</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-feedback" role="tabpanel" aria-labelledby="nav-feedback-tab"
+                 tabindex="0">
+                <div class="bg-white shadow-custom p-3">
+                    <div class="card-body p-1">
+                        <table class="table">
+                            <thead class="text-22">
+                            <tr>
+                                <th>Requested</th>
+                                <th>Completed</th>
+                                <th>Description</th>
+                                <th>Links</th>
+                                <th>Video</th>
+                                <th>Feedback</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-22">1/4/24</td>
+                                <td>
+                                    <div class="bg-warning d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Pending
+                                    </div>
+                                </td>
+                                <td class="text-22">Give feedback on orders</td>
+                                <td>
+                                    <div class="bg-secondary-success d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Yes
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="bg-warning d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        No
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="border border-body text-body fw-semibold rounded-1 p-3 d-inline-block"
+                                         role="button">
+                                        <div class="px-3">View</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-updates" role="tabpanel" aria-labelledby="nav-updates-tab"
+                 tabindex="0">
+                <div class="bg-white shadow-custom p-3">
+                    <div class="card-body p-1">
+                        <table class="table">
+                            <thead class="text-22">
+                            <tr>
+                                <th>Requested</th>
+                                <th>Type</th>
+                                <th>Approved By</th>
+                                <th>Decision Resource</th>
+                                <th>Schedule Impact</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-22">1/4/24</td>
+                                <td>
+                                    <div class="bg-primary d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        S
+                                    </div>
+                                </td>
+                                <td class="text-22">
+                                    <div class="d-flex align-items-center">
+                                        <img src="./../assets/images/approver1.png" alt="">
+                                        <img src="./../assets/images/approver2.png" alt="">
+                                        <img src="./../assets/images/approver3.png" alt="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="bg-primary d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Metting
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="bg-secondary-success d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Yes
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-requests" role="tabpanel" aria-labelledby="nav-requests-tab"
+                 tabindex="0">
+                <div class="bg-white shadow-custom p-3">
+                    <div class="card-body p-1">
+                        <table class="table">
+                            <thead class="text-22">
+                            <tr>
+                                <th>Requested</th>
+                                <th>Completed</th>
+                                <th>Description</th>
+                                <th>Links</th>
+                                <th>Video</th>
+                                <th>Feedback</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-22">1/4/24</td>
+                                <td>
+                                    <div class="bg-warning d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Pending
+                                    </div>
+                                </td>
+                                <td class="text-22">Give feedback on orders</td>
+                                <td>
+                                    <div class="bg-secondary-success d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        Yes
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="bg-warning d-inline-block rounded-1 px-3 py-1 text-white fw-medium">
+                                        No
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="border border-body text-body fw-semibold rounded-1 p-3 d-inline-block"
+                                         role="button">
+                                        <div class="px-3">View</div>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr class="text-22">
+                                <td>12/20/2023</td>
+                                <td>12/20/2023</td>
+                                <td>Need Logo Source</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-files" role="tabpanel" aria-labelledby="nav-files-tab"
+                 tabindex="0">
+                <div class="bg-white shadow-custom p-3">
+                    <div class="card-body p-1">
+                        <table class="table">
+                            <thead class="text-22">
+                            <tr>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Owner</th>
+                                <th>Description</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="text-22">1/4/24</td>
+                                <td>
+                                    <i class="custom-icon-blue-adobe d-block"></i>
+                                </td>
+                                <td class="text-22">
+                                    <div class="d-flex align-items-center">
+                                        <img src="./../assets/images/approver2.png" alt="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="text-22">Text for Homepage</div>
+                                        <div class="border border-body rounded-1 p-3 d-inline-block" role="button">
+                                            <div class="px-3 text-body fw-semibold">Download</div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text-22">12/12/2023</td>
+                                <td>
+                                    <i class="custom-icon-red-adobe d-block"></i>
+                                </td>
+                                <td class="text-22">
+                                    <div class="d-flex align-items-center">
+                                        <img src="./../assets/images/approver3.png" alt="">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="text-22">How WO Works</div>
+                                        <div class="border border-body rounded-1 p-3 d-inline-block" role="button">
+                                            <div class="px-3 text-body fw-semibold">Download</div>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-team" role="tabpanel" aria-labelledby="nav-team-tab"
+                 tabindex="0">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="bg-white shadow-custom p-4 rounded-2">
+                            <div class="p-1">
+                                <div class="text-26 text-body fw-semibold">Team Leader</div>
+                                <div class="mt-3 pt-1"></div>
+                                <img src="./../assets/images/team-leader.png" alt="" class="w-100">
+                                <div class="mt-3 pt-1"></div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="text-22 text-body fw-semibold">John Smith</div>
+                                    <div class="bg-secondary-success rounded-1 px-3 py-1 text-white fw-medium">Team
+                                        Lead
+                                    </div>
+                                </div>
+                                <div class="mt-3 pt-1"></div>
+                                <div class="text-secondary4 text-18">It is a long established fact that a reader will be
+                                    distracted by the readable content of a page when looking at its layout.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-8">
+                        <div class="bg-white shadow-custom p-4 rounded-2">
+                            <div class="p-1">
+                                <div class="text-26 text-body fw-semibold">Team Members</div>
+                                <div class="mt-4 pt-1"></div>
+                                <div class="d-grid" id="teamMembersGrid">
+                                    <div class="rounded-2 border border-secondary p-2 d-flex justify-content-between align-items-start">
+                                        <img src="./../assets/images/eva-kalare1.png" alt="" class="me-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                                <div class="text-22 fw-semibold text-body">Eva Kalare</div>
+                                                <div class="bg-warning px-3 py-1 text-white fw-medium rounded-1">
+                                                    Designer
+                                                </div>
+                                            </div>
+                                            <div class="pb-1 border-secondary"></div>
+                                            <div class="text-14 text-secondary4 mt-3">
+                                                It is a long established fact that a reader will be distracted by the
+                                                readable content of a page when looking at its layout.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rounded-2 border border-secondary p-2 d-flex justify-content-between align-items-start">
+                                        <img src="./../assets/images/john-smith2.png" alt="" class="me-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                                <div class="text-22 fw-semibold text-body">John Smith</div>
+                                                <div class="bg-primary px-3 py-1 text-white fw-medium rounded-1">
+                                                    Development
+                                                </div>
+                                            </div>
+                                            <div class="pb-1 border-secondary"></div>
+                                            <div class="text-14 text-secondary4 mt-3">
+                                                It is a long established fact that a reader will be distracted by the
+                                                readable content of a page when looking at its layout.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rounded-2 border border-secondary p-2 d-flex justify-content-between align-items-start">
+                                        <img src="./../assets/images/john-smith3.png" alt="" class="me-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                                <div class="text-22 fw-semibold text-body">John Smith</div>
+                                                <div class="bg-warning px-3 py-1 text-white fw-medium rounded-1">
+                                                    Designer
+                                                </div>
+                                            </div>
+                                            <div class="pb-1 border-secondary"></div>
+                                            <div class="text-14 text-secondary4 mt-3">
+                                                It is a long established fact that a reader will be distracted by the
+                                                readable content of a page when looking at its layout.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rounded-2 border border-secondary p-2 d-flex justify-content-between align-items-start">
+                                        <img src="./../assets/images/eva-kalarae2.png" alt="" class="me-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                                <div class="text-22 fw-semibold text-body">Eva Kalare</div>
+                                                <div class="bg-primary px-3 py-1 text-white fw-medium rounded-1">
+                                                    Development
+                                                </div>
+                                            </div>
+                                            <div class="pb-1 border-secondary"></div>
+                                            <div class="text-14 text-secondary4 mt-3">
+                                                It is a long established fact that a reader will be distracted by the
+                                                readable content of a page when looking at its layout.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rounded-2 border border-secondary p-2 d-flex justify-content-between align-items-start">
+                                        <img src="./../assets/images/john-smith4.png" alt="" class="me-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                                <div class="text-22 fw-semibold text-body">John Smith</div>
+                                                <div class="bg-primary px-3 py-1 text-white fw-medium rounded-1">
+                                                    Development
+                                                </div>
+                                            </div>
+                                            <div class="pb-1 border-secondary"></div>
+                                            <div class="text-14 text-secondary4 mt-3">
+                                                It is a long established fact that a reader will be distracted by the
+                                                readable content of a page when looking at its layout.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="rounded-2 border border-secondary p-2 d-flex justify-content-between align-items-start">
+                                        <img src="./../assets/images/eva-kalare3.png" alt="" class="me-3">
+                                        <div>
+                                            <div class="d-flex justify-content-between align-items-center py-2 border-bottom">
+                                                <div class="text-22 fw-semibold text-body">Eva Kalare</div>
+                                                <div class="bg-warning px-3 py-1 text-white fw-medium rounded-1">
+                                                    Designer
+                                                </div>
+                                            </div>
+                                            <div class="pb-1 border-secondary"></div>
+                                            <div class="text-14 text-secondary4 mt-3">
+                                                It is a long established fact that a reader will be distracted by the
+                                                readable content of a page when looking at its layout.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-contract" role="tabpanel" aria-labelledby="nav-contract-tab"
+                 tabindex="0">
+                <div class="bg-white shadow-custom p-4 rounded-2" id="upworkContract">
+                    <div class="p-2">
+                        <div class="p-1 d-flex align-items-center">
+                            <div class="rounded-2 border-success2 p-4 border me-4">
+                                <i class="custom-icon-upwork d-block"></i>
+                            </div>
+                            <div class="ms-1 text-body text-22 col-5">
+                                Your contract is currently through upwork, please visit this link to be taken to the
+                                milestone page
+                            </div>
+                            <div class="ms-auto rounded-1 p-3 border border-body" role="button"
+                                 id="viewProjectContract">
+                                <div class="px-3 text-body fw-semibold">View</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-3 pt-1"></div>
+                <div class="contracts hide">
+                    <div class="bg-white shadow-custom p-4 rounded-2">
+                        <div class="p-2">
+                            <div class="p-1 d-flex align-items-center">
+                                <i class="custom-icon-red-adobe me-5"></i>
+                                <div class="ms-3 text-body text-22">
+                                    Extension
+                                    <br>
+                                    Signed 1/12/24
+                                </div>
+                                <div class="ms-auto rounded-1 p-3 border border-body view-contract" role="button">
+                                    <div class="px-3 text-body fw-semibold">View</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-3 pt-1"></div>
+                    <div class="bg-white shadow-custom p-4 rounded-2">
+                        <div class="p-2">
+                            <div class="p-1 d-flex align-items-center">
+                                <i class="custom-icon-red-adobe me-5"></i>
+                                <div class="ms-3 text-body text-22">
+                                    Design Contract
+                                    <br>
+                                    Signed 12/3/23
+                                </div>
+                                <div class="ms-auto rounded-1 p-3 border border-body view-contract" role="button">
+                                    <div class="px-3 text-body fw-semibold">View</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="./../assets/libraries/bootstrap-5.3.2/js/bootstrap.bundle.min.js"></script>
+<script src="./../assets/jquery.min.js"></script>
+<script src="./../assets/app.js"></script>
+<script type="text/javascript">
+    $(function () {
+        initChat();
+        initTaskTable();
+        initContracts();
+    })
+</script>
+</body>
+</html>

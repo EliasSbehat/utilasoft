@@ -1,0 +1,183 @@
+[class^="custom-icon"]{
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.custom-icon-wrong {
+    background-image: url('./icons/wrong.svg');
+    width: 24px;
+    height: 24px;
+    flex: none;
+}
+
+.custom-icon-new-inquiries {
+    background-image: url('./icons/new-inquiries.svg');
+    width: 41px;
+    height: 39px;
+}
+
+.custom-icon-discussions {
+    background-image: url('./icons/discussions.svg');
+    width: 40px;
+    height: 40px;
+}
+
+.custom-icon-negotiations {
+    background-image: url('./icons/negotiations.svg');
+    width: 39px;
+    height: 39px;
+}
+
+.custom-icon-signing {
+    background-image: url('./icons/signing.svg');
+    width: 37px;
+    height: 38px;
+}
+
+.custom-icon-ending-soon {
+    background-image: url('./icons/ending-soon.svg');
+    width: 41px;
+    height: 41px;
+}
+
+.custom-icon-bids {
+    background-image: url('./icons/bids.svg');
+    width: 48px;
+    height: 48px;
+}
+
+.custom-icon-visits {
+    background-image: url('./icons/visits.svg');
+    width: 39px;
+    height: 39px;
+}
+
+.custom-icon-accepted {
+    background-image: url('./icons/accepted.svg');
+    width: 33px;
+    height: 36px;
+}
+
+.custom-icon-converted {
+    background-image: url('./icons/converted.svg');
+    width: 41px;
+    height: 37px;
+}
+
+.custom-icon-search-input {
+    background-image: url('./icons/search-input.svg');
+    width: 22px;
+    height: 22px;
+}
+
+.custom-icon-tab-form-plus {
+    background-image: url('./icons/tab-form-plus.svg');
+    width: 22px;
+    height: 22px;
+}
+
+.custom-icon-wrong {
+    cursor: pointer;
+}
+
+.custom-icon-project-plus {
+    background-image: url('./icons/project-plus.svg');
+    width: 76px;
+    height: 76px;
+}
+
+.custom-icon-project-recent-activity-hour {
+    background-image: url('./icons/project-recent-activity-hour.svg');
+    width: 16px;
+    height: 16px;
+}
+
+.custom-icon-chat-send {
+    background-image: url('./icons/chat-send.svg');
+    width: 26px;
+    height: 26px;
+}
+.custom-icon-task-add1 {
+    background-image: url('./icons/task-add1.svg');
+    width: 15px;
+    height: 15px;
+}
+.custom-icon-chevron-down {
+    background-image: url('./icons/chevron-down.svg');
+    width: 17px;
+    height: 9px;
+}
+.custom-icon-chevron-down1 {
+    background-image: url('./icons/chevron-down1.svg');
+    width: 14px;
+    height: 7px;
+}
+.custom-icon-task-checked {
+    background-image: url('./icons/task-checked.svg');
+    width: 20px;
+    height: 20px;
+}
+.custom-icon-task-tree {
+    background-image: url('./icons/task-tree.svg');
+    width: 15px;
+    height: 11px;
+}
+.custom-icon-task-assignee {
+    background-image: url('./icons/task-assignee.svg');
+    width: 20px;
+    height: 20px;
+}
+.custom-icon-task-add {
+    background-image: url('./icons/task-add.svg');
+    width: 11px;
+    height: 11px;
+}
+.custom-icon-hand {
+    background-image: url('./icons/hand.svg');
+    width: 19px;
+    height: 20px;
+}
+.custom-icon-attachment {
+    background-image: url('./icons/attachment.svg');
+    width: 18px;
+    height: 19px;
+}
+.custom-icon-3-dots {
+    background-image: url('./icons/3-dots.svg');
+    width: 4px;
+    height: 18px;
+}
+.custom-icon-no-assignee {
+    background-image: url('./icons/no-assignee.svg');
+    width: 20px;
+    height: 20px;
+}
+.custom-icon-due-date {
+    background-image: url('./icons/due-date.svg');
+    width: 20px;
+    height: 20px;
+}
+.custom-icon-collaborator-add {
+    background-image: url('./icons/collaborator-add.svg');
+    width: 30px;
+    height: 30px;
+}
+.custom-icon-leave-task {
+    background-image: url('./icons/leave-task.svg');
+    width: 17px;
+    height: 20px;
+}
+.custom-icon-blue-adobe {
+    background-image: url('./icons/blue-adobe.svg');
+    width: 31px;
+    height: 39px;
+}
+.custom-icon-red-adobe {
+    background-image: url('./icons/red-adobe.svg');
+    width: 31px;
+    height: 39px;
+}
+.custom-icon-upwork {
+    background-image: url('./icons/upwork.svg');
+    width: 253px;
+    height: 75px;
+}
