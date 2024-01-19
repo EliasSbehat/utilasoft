@@ -154,7 +154,7 @@ function initChat() {
             sentChat();
         }
     })
-    $('#sendChatBtn').click(function(){
+    $('#sendChatBtn').click(function () {
         sentChat();
     })
 }
@@ -163,37 +163,82 @@ function sentChat() {
     $chatContent = $('#chatContent');
     const content = $chatContent.val();
     $(`<div class="d-flex justify-content-end align-items-start my-3">
-                 <div class="rounded-1 bg-secondary3 p-3 me-2 w-500">
-                     <div class="p-1 text-black lh-lg position-relative">
-                         ${content}
-                         <span class="position-absolute bottom-0 end-0 text-secondary2 text-14">3:32 pm</span>
-                     </div>
-                 </div>
-                 <img src="./../assets/images/discussion-user1.png" alt="">
-            </div>`).insertBefore('.chat-replies');
+         <div class="rounded-1 bg-secondary3 p-3 me-2 w-500">
+             <div class="p-1 text-black lh-lg position-relative">
+                 ${content}
+                 <span class="position-absolute bottom-0 end-0 text-secondary2 text-14">3:32 pm</span>
+             </div>
+         </div>
+         <img src="./../assets/images/discussion-user1.png" alt="">
+    </div>`).insertBefore('.chat-replies');
     $chatContent.val("");
 }
-function initTaskTable(){
-    $('#taskTable tr.parent-row').click(function(){
+
+function initTaskTable() {
+    $('#taskTable tr.parent-row').click(function () {
         const id = $(this).data('id');
         $(this).find('.custom-icon-chevron-down1').toggleClass('open')
         $(`#taskTable tr[data-parent-id="${id}"]`).toggle();
     })
 }
-function initContracts(){
-    $('#viewProjectContract').click(function(){
+
+function initContracts() {
+    $('#viewProjectContract').click(function () {
         $(`.contracts`).show();
         $('#upworkContract').hide();
     })
-    $('.view-contract').click(function(){
+    $('.view-contract').click(function () {
         $(`.contracts`).hide();
         $('#upworkContract').show();
     })
 }
 
-function initAlerts(){
-    $('.app-alert i.custom-icon-wrong').click(function(){
+function initAlerts() {
+    $('.app-alert i.custom-icon-wrong').click(function () {
         $(this).closest('.app-alert').remove();
     })
 }
+
 initAlerts();
+
+function addTaskRow() {
+    $('.add-task-row').on('keydown', function (e) {
+        const code = (e.keyCode ? e.keyCode : e.which);
+        if (code !== 13) return;
+        $taskRow = $(this).closest('tr');
+        const taskContent = $(this).val();
+        if (!taskContent) return;
+        const parentId = $taskRow.data('parent-id');
+        $(`<tr data-parent-id="${parentId}">
+            <td>
+                <div class="d-flex align-items-center">
+                    <button class="btn btn-outline-secondary border-0 p-0 me-2 ms-${parentId === 1 ? "5" : "4"} rounded-circle">
+                         <i class="custom-icon-task-checked d-block"></i>
+                    </button>
+                   <div class="text-14 me-4 flex-1">${taskContent}</div>
+                </div>
+                </td>
+            <td></td>
+            </tr>`).insertBefore($taskRow);
+        $(this).val("");
+    })
+}
+
+function addComment() {
+    $('#addComment').click(function () {
+        $commentTextarea = $('#commentTextarea');
+        const content = $commentTextarea.val();
+        if (!content) return;
+        $(`
+            <div class="d-flex align-items-center">
+                <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white fw-medium wh-36 me-2">
+                    CA
+                </div>
+                <div class="fw-bold">Chris Abbott&nbsp;</div>
+                <div class="me-2">${content}</div>
+            </div>
+            <div class="mt-3 pt-1"></div>
+            `).appendTo($('#collapseComments'));
+        $commentTextarea.val("");
+    })
+}

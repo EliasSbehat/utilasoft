@@ -181,3 +181,8 @@
     width: 253px;
     height: 75px;
 }
+.custom-icon-task-mark-complete {
+    background-image: url('./icons/task-mark-complete.svg');
+    width: 17px;
+    height: 12px;
+}

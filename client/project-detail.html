@@ -121,7 +121,7 @@
                 </button>
                 <button class="nav-link text-22" id="nav-files-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-files"
-                        type="button" role="tab" aria-controls="nav-files" aria-selected="false">Updates
+                        type="button" role="tab" aria-controls="nav-files" aria-selected="false">Files
                 </button>
                 <button class="nav-link text-22" id="nav-team-tab" data-bs-toggle="tab"
                         data-bs-target="#nav-team"
@@ -186,17 +186,17 @@
                         <div class="rounded-2 bg-white shadow-custom p-4 text-body">
                             <div class="p-2 d-flex align-items-center">
                                 <div class="text-22 fw-semibold me-5">Important Links</div>
-                                <div class="border-primary rounded-1 px-4 py-3 fw-semibold text-primary me-4 border w-190 text-center"
-                                     role="button">Upwork Contract
-                                </div>
-                                <div class="border-primary rounded-1 px-4 py-3 fw-semibold text-primary ms-1 me-4 border w-190 text-center"
-                                     role="button">
+                                <button class="btn btn-outline-primary border-primary rounded-1 px-4 py-3 fw-semibold me-4 border w-190 text-center"
+                                        role="button">Upwork Contract
+                                </button>
+                                <button class="btn btn-outline-primary border-primary rounded-1 px-4 py-3 fw-semibold ms-1 me-4 border w-190 text-center"
+                                        role="button">
                                     Frontend
-                                </div>
-                                <div class="border-primary rounded-1 px-4 py-3 fw-semibold text-primary ms-1 me-4 border w-190 text-center"
-                                     role="button">
+                                </button>
+                                <button class="btn btn-outline-primary border-primary rounded-1 px-4 py-3 fw-semibold ms-1 me-4 border w-190 text-center"
+                                        role="button">
                                     Backend
-                                </div>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -407,16 +407,16 @@
                                 <div class="py-3"></div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="text-18 fw-medium text-black">Header</div>
-                                    <div class="border border-body rounded-1 p-3" role="button">
-                                        <div class="px-3 text-body fw-semibold">Load</div>
-                                    </div>
+                                    <button class="btn btn-outline-dark border border-body rounded-1 p-3" role="button">
+                                        <span class="px-3 fw-semibold">Load</span>
+                                    </button>
                                 </div>
                                 <div class="py-3"></div>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="text-18 fw-medium text-black">Animation opportunities</div>
-                                    <div class="border border-body rounded-1 p-3" role="button">
-                                        <div class="px-3 text-body fw-semibold">Load</div>
-                                    </div>
+                                    <button class="btn btn-outline-dark border border-body rounded-1 p-3" role="button">
+                                        <span class="px-3 fw-semibold">Load</span>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -446,9 +446,10 @@
                                 <td class="text-22">1/4/24</td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <img src="./../assets/images/approver1.png" alt="">
-                                        <img src="./../assets/images/approver2.png" alt="">
-                                        <img src="./../assets/images/approver3.png" alt="">
+                                        <img src="./../assets/images/approver1.png" class="circle-image-block rounded-circle" alt="">
+                                        <img src="./../assets/images/approver2.png" class="circle-image-block rounded-circle" alt="">
+                                        <img src="./../assets/images/approver3.png"
+                                             class="circle-image-block rounded-circle" alt="">
                                     </div>
                                 </td>
                                 <td class="text-22">Scheduled</td>
@@ -485,18 +486,18 @@
                  tabindex="0">
                 <div class="row text-black">
                     <div class="col">
-                        <div class="bg-white shadow-custom rounded-1 p-4">
+                        <div class="bg-white shadow-custom rounded-2 p-4">
                             <div class="py-1 px-3">
                                 <div class="d-inline-block">
-                                    <div class="rounded-1 border border-secondary d-flex align-items-center ">
-                                        <div class="d-flex align-items-center p-2 border-end border-secondary">
+                                    <button class="btn btn-outline-secondary p-0 rounded-1 border border-secondary d-flex align-items-center ">
+                                        <span class="d-flex align-items-center p-2 border-end border-secondary">
                                             <i class="custom-icon-task-add1 me-2"></i>
-                                            <div class="text-18 fw-medium text-dark">Add Task</div>
-                                        </div>
-                                        <div class="p-3">
+                                            <span class="text-18 fw-medium text-dark">Add Task</span>
+                                        </span>
+                                        <span class="p-3">
                                             <i class="custom-icon-chevron-down d-block"></i>
-                                        </div>
-                                    </div>
+                                        </span>
+                                    </button>
                                 </div>
                                 <div class="mb-4 pt-1"></div>
                                 <div class="mb-4 pt-1">
@@ -508,7 +509,7 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
+                                        <tr class="parent-row" data-id="0" role="button">
                                             <td colspan="2">
                                                 <div class="d-flex align-items-center">
                                                     <i class="custom-icon-chevron-down1 me-3"></i>
@@ -520,10 +521,10 @@
                                             <td>
                                                 <div class="d-flex align-items-center">
                                                     <i class="custom-icon-chevron-down1 me-3"></i>
-                                                    <i class="custom-icon-task-checked me-2"></i>
-                                                    <div class="text-14 me-4 flex-1">[READ ME] Instructions for using
-                                                        this
-                                                        project
+                                                    <button class="btn btn-outline-secondary border-0 p-0 me-2 rounded-circle">
+                                                        <i class="custom-icon-task-checked d-block"></i>
+                                                    </button>
+                                                    <div class="text-14 me-4 flex-1">[READ ME] Instructions for using this project
                                                     </div>
                                                     <div class="text-secondary me-2">5</div>
                                                     <i class="custom-icon-task-tree"></i>
@@ -534,7 +535,9 @@
                                         <tr data-parent-id="1">
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <button class="btn btn-outline-secondary border-0 p-0 me-2 ms-5 rounded-circle">
+                                                        <i class="custom-icon-task-checked d-block"></i>
+                                                    </button>
                                                     <div class="text-14 me-4 flex-1">Rename existing sections and tasks
                                                         to fit
                                                         your project needs.
@@ -542,13 +545,37 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <i class="custom-icon-task-assignee d-block"></i>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="./../assets/images/approver1.png"  class="circle-image-block rounded-circle" alt="">
+                                                    <img src="./../assets/images/approver2.png"  class="circle-image-block rounded-circle" alt="">
+                                                    <img src="./../assets/images/approver3.png"  class="circle-image-block rounded-circle" alt="">
+                                                </div>
                                             </td>
                                         </tr>
                                         <tr data-parent-id="1">
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <button class="btn btn-outline-secondary border-0 p-0 me-2 ms-5 rounded-circle">
+                                                        <i class="custom-icon-task-checked d-block"></i>
+                                                    </button>
+                                                    <div class="text-14 me-4 flex-1">Rename existing sections and tasks
+                                                        to fit
+                                                        your project needs.
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white fw-medium wh-36 me-2">
+                                                    CA
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr data-parent-id="1">
+                                            <td>
+                                                <div class="d-flex align-items-center">
+                                                    <button class="btn btn-outline-secondary border-0 p-0 me-2 ms-5 rounded-circle">
+                                                        <i class="custom-icon-task-checked d-block"></i>
+                                                    </button>
                                                     <div class="text-14 me-4 flex-1">Rename existing sections and tasks
                                                         to fit
                                                         your project needs.
@@ -560,7 +587,9 @@
                                         <tr data-parent-id="1">
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <button class="btn btn-outline-secondary border-0 p-0 me-2 ms-5 rounded-circle">
+                                                        <i class="custom-icon-task-checked d-block"></i>
+                                                    </button>
                                                     <div class="text-14 me-4 flex-1">Rename existing sections and tasks
                                                         to fit
                                                         your project needs.
@@ -572,7 +601,9 @@
                                         <tr data-parent-id="1">
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
+                                                    <button class="btn btn-outline-secondary border-0 p-0 me-2 ms-5 rounded-circle">
+                                                        <i class="custom-icon-task-checked d-block"></i>
+                                                    </button>
                                                     <div class="text-14 me-4 flex-1">Rename existing sections and tasks
                                                         to fit
                                                         your project needs.
@@ -582,22 +613,11 @@
                                             <td></td>
                                         </tr>
                                         <tr data-parent-id="1">
-                                            <td>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="custom-icon-task-checked me-2 ms-5"></i>
-                                                    <div class="text-14 me-4 flex-1">Rename existing sections and tasks
-                                                        to fit
-                                                        your project needs.
-                                                    </div>
-                                                </div>
-                                            </td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
                                             <td colspan="2">
-                                                <div class="d-flex align-items-center" role="button">
-                                                    <i class="custom-icon-task-add me-2"></i>
-                                                    <div class="text-secondary text-14 fw-medium">Add Task...</div>
+                                                <div class="d-flex align-items-center">
+                                                    <!--<i class="custom-icon-task-add me-2 add-task-check" role="button"></i> -->
+                                                    <input class="text-14 fw-medium add-task-row form-control"
+                                                           placeholder="+ Add Task..." aria-label=""/>
                                                 </div>
                                             </td>
                                         </tr>
@@ -612,7 +632,9 @@
                                         <tr data-parent-id="2">
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <i class="custom-icon-task-checked ms-4 me-2"></i>
+                                                    <button class="btn btn-outline-secondary border-0 p-0 me-2 ms-4 rounded-circle">
+                                                        <i class="custom-icon-task-checked d-block"></i>
+                                                    </button>
                                                     <div class="text-14 me-4 flex-1">[EXAMPLE TASK] Set up new reporting
                                                         tools.
                                                     </div>
@@ -623,7 +645,9 @@
                                         <tr data-parent-id="2">
                                             <td>
                                                 <div class="d-flex align-items-center">
-                                                    <i class="custom-icon-task-checked ms-4 me-2"></i>
+                                                    <button class="btn btn-outline-secondary border-0 p-0 me-2 ms-4 rounded-circle">
+                                                        <i class="custom-icon-task-checked d-block"></i>
+                                                    </button>
                                                     <div class="text-14 me-4 flex-1">[EXAMPLE TASK] Set up new reporting
                                                         tools.
                                                     </div>
@@ -631,11 +655,12 @@
                                             </td>
                                             <td></td>
                                         </tr>
-                                        <tr>
+                                        <tr data-parent-id="2">
                                             <td colspan="2">
-                                                <div class="d-flex align-items-center" role="button">
-                                                    <i class="custom-icon-task-add me-2"></i>
-                                                    <div class="text-secondary text-14 fw-medium">Add Task...</div>
+                                                <div class="d-flex align-items-center">
+                                                    <!--<i class="custom-icon-task-add me-2 add-task-check" role="button"></i> -->
+                                                    <input class="text-14 fw-medium add-task-row form-control"
+                                                           placeholder="+ Add Task..." aria-label=""/>
                                                 </div>
                                             </td>
                                         </tr>
@@ -646,16 +671,16 @@
                         </div>
                     </div>
                     <div class="col">
-                        <div class="bg-white shadow-custom rouned-1 p-4">
+                        <div class="bg-white shadow-custom rounded-2 p-4">
                             <div class="py-1 px-3">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="d-inline-block">
-                                        <div class="rounded-1 border border-secondary d-flex align-items-center ">
-                                            <div class="d-flex align-items-center p-2 border-end border-secondary">
-                                                <i class="custom-icon-task-add1 me-2"></i>
-                                                <div class="text-18 fw-medium text-dark">Mark Complete</div>
-                                            </div>
-                                        </div>
+                                        <button class="btn btn-outline-secondary p-0 rounded-1 border border-secondary d-flex align-items-center ">
+                                            <span class="d-flex align-items-center p-2 border-end border-secondary">
+                                                <i class="custom-icon-task-mark-complete me-2"></i>
+                                                <span class="text-18 fw-medium text-dark">Mark Complete</span>
+                                            </span>
+                                        </button>
                                     </div>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <i class="custom-icon-hand me-4" role="button"></i>
@@ -695,42 +720,50 @@
                                 <a class="text-primary text-decoration-none"
                                    href="https://asana.com/teams/product-mangers" target="_blank">https://asana.com/teams/product-mangers</a>
                                 <div class="mt-4 pt-1"></div>
-                                <div class="rounded-1 bg-3666AF0D p-3">
+                                <div class="rounded-1 bg-3666AF0D p-3 text-14">
                                     <div class="p-1 text-53565ACC">
                                         <div class="d-flex align-items-center">
-                                            <div class="text-14 me-2">Comments</div>
-                                            <i class="custom-icon-chevron-down"></i>
+                                            <div class="d-flex align-items-center me-auto" data-bs-toggle="collapse"
+                                                 href="#collapseComments" role="button" aria-expanded="false"
+                                                 aria-controls="collapseComments">
+                                                <div class="me-2">Comments</div>
+                                                <i class="custom-icon-chevron-down me-auto"></i>
+                                            </div>
+                                            <div role="button" class="d-flex align-items-center">
+                                                <i class="custom-icon-leave-task me-1"></i>
+                                                <div class="fw-medium">Leave task</div>
+                                            </div>
                                         </div>
                                         <div class="mt-2 pt-1"></div>
-                                        <div class="d-flex align-items-center">
-                                            <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white text-14 fw-medium wh-36 me-2">
-                                                CA
+                                        <div class="collapse show" id="collapseComments">
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white fw-medium wh-36 me-2">
+                                                    CA
+                                                </div>
+                                                <div class="fw-bold">Chris Abbott&nbsp;</div>
+                                                <div class="me-2">created this task.</div>
+                                                <div class="text-12">1 minutes ago</div>
                                             </div>
-                                            <div class="fw-bold text-14">Chris Abbott&nbsp;</div>
-                                            <div class="text-14 me-2">created this task.</div>
-                                            <div class="text-12">1 minutes ago</div>
+                                            <div class="mt-3 pt-1"></div>
                                         </div>
-                                        <div class="mt-3 pt-1"></div>
                                         <div class="d-flex justify-content-between align-items-start">
                                             <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white text-14 fw-medium wh-36 me-2">
                                                 CA
                                             </div>
                                             <div class="flex-1">
                                                 <textarea class="form-control border-0 mb-3 fs-6" rows="6"
-                                                          placeholder="Add a comment" aria-label="comment"></textarea>
+                                                          placeholder="Add a comment" aria-label="comment"
+                                                          id="commentTextarea"></textarea>
                                                 <div class="d-flex align-items-center text-14">
                                                     <div class="me-2">Collaborators</div>
-                                                    <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white text-14 fw-medium wh-30 me-1">
+                                                    <div class="bg-3256BC rounded-circle border border-white d-flex justify-content-center align-items-center text-white fw-medium wh-30 me-1">
                                                         CA
                                                     </div>
                                                     <i class="custom-icon-no-assignee wh-30 me-1" role="button"></i>
                                                     <i class="custom-icon-no-assignee wh-30 me-1" role="button"></i>
                                                     <i class="custom-icon-collaborator-add me-1 me-auto"
                                                        role="button"></i>
-                                                    <div role="button" class="d-flex align-items-center">
-                                                        <i class="custom-icon-leave-task me-1"></i>
-                                                        <div class="fw-medium">Leave task</div>
-                                                    </div>
+                                                    <button class="btn btn-primary" id="addComment">Save</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -776,10 +809,10 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="border border-body text-body fw-semibold rounded-1 p-3 d-inline-block"
-                                         role="button">
-                                        <div class="px-3">View</div>
-                                    </div>
+                                    <button class="btn btn-outline-dark border border-body fw-semibold rounded-1 p-3 d-inline-block"
+                                            role="button">
+                                        <span class="px-3">View</span>
+                                    </button>
                                 </td>
                             </tr>
                             </tbody>
@@ -812,9 +845,9 @@
                                 </td>
                                 <td class="text-22">
                                     <div class="d-flex align-items-center">
-                                        <img src="./../assets/images/approver1.png" alt="">
-                                        <img src="./../assets/images/approver2.png" alt="">
-                                        <img src="./../assets/images/approver3.png" alt="">
+                                        <img src="./../assets/images/approver1.png" class="circle-image-block rounded-circle" alt="">
+                                        <img src="./../assets/images/approver2.png" class="circle-image-block rounded-circle" alt="">
+                                        <img src="./../assets/images/approver3.png" class="circle-image-block rounded-circle" alt="">
                                     </div>
                                 </td>
                                 <td>
@@ -869,10 +902,10 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="border border-body text-body fw-semibold rounded-1 p-3 d-inline-block"
-                                         role="button">
-                                        <div class="px-3">View</div>
-                                    </div>
+                                    <button class="btn btn-outline-dark border border-body fw-semibold rounded-1 p-3 d-inline-block"
+                                            role="button">
+                                        <span class="px-3">View</span>
+                                    </button>
                                 </td>
                             </tr>
 
@@ -911,15 +944,16 @@
                                 </td>
                                 <td class="text-22">
                                     <div class="d-flex align-items-center">
-                                        <img src="./../assets/images/approver2.png" alt="">
+                                        <img src="./../assets/images/approver2.png"  class="circle-image-block rounded-circle" alt="">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-between">
                                         <div class="text-22">Text for Homepage</div>
-                                        <div class="border border-body rounded-1 p-3 d-inline-block" role="button">
-                                            <div class="px-3 text-body fw-semibold">Download</div>
-                                        </div>
+                                        <button class="btn btn-outline-dark border border-body rounded-1 p-3 d-inline-block"
+                                                role="button">
+                                            <span class="px-3 fw-semibold">Download</span>
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
@@ -930,16 +964,16 @@
                                 </td>
                                 <td class="text-22">
                                     <div class="d-flex align-items-center">
-                                        <img src="./../assets/images/approver3.png" alt="">
+                                        <img src="./../assets/images/approver3.png"  class="circle-image-block rounded-circle" alt="">
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex justify-content-between">
                                         <div class="text-22">How WO Works</div>
-                                        <div class="border border-body rounded-1 p-3 d-inline-block" role="button">
-                                            <div class="px-3 text-body fw-semibold">Download</div>
-                                        </div>
-
+                                        <button class="btn btn-outline-dark border border-body rounded-1 p-3 d-inline-block"
+                                                role="button">
+                                            <span class="px-3 fw-semibold">Download</span>
+                                        </button>
                                     </div>
                                 </td>
                             </tr>
@@ -1092,10 +1126,10 @@
                                 Your contract is currently through upwork, please visit this link to be taken to the
                                 milestone page
                             </div>
-                            <div class="ms-auto rounded-1 p-3 border border-body" role="button"
-                                 id="viewProjectContract">
-                                <div class="px-3 text-body fw-semibold">View</div>
-                            </div>
+                            <button class="btn btn-outline-dark ms-auto rounded-1 p-3 border border-body" role="button"
+                                    id="viewProjectContract">
+                                <span class="px-3 fw-semibold">View</span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -1110,9 +1144,10 @@
                                     <br>
                                     Signed 1/12/24
                                 </div>
-                                <div class="ms-auto rounded-1 p-3 border border-body view-contract" role="button">
-                                    <div class="px-3 text-body fw-semibold">View</div>
-                                </div>
+                                <button class="btn btn-outline-dark ms-auto rounded-1 p-3 border border-body view-contract"
+                                        role="button">
+                                    <span class="px-3 fw-semibold">View</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1126,9 +1161,10 @@
                                     <br>
                                     Signed 12/3/23
                                 </div>
-                                <div class="ms-auto rounded-1 p-3 border border-body view-contract" role="button">
-                                    <div class="px-3 text-body fw-semibold">View</div>
-                                </div>
+                                <button class="btn btn-outline-dark ms-auto rounded-1 p-3 border border-body view-contract"
+                                        role="button">
+                                    <span class="px-3 fw-semibold">View</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -1146,6 +1182,8 @@
         initChat();
         initTaskTable();
         initContracts();
+        addTaskRow();
+        addComment();
     })
 </script>
 </body>

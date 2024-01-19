@@ -274,8 +274,8 @@ th:last-child {
 
 /*button*/
 .btn {
-    padding: 13px 30px !important;
-    border-radius: 4px !important;
+    /* padding: 13px 30px !important; */
+    /* border-radius: 4px !important; */
 }
 
 .btn-sm {
@@ -324,14 +324,21 @@ th:last-child {
 }
 
 .btn-primary {
-    --bs-btn-bg: var(--bs-primary);
-    --bs-btn-border-color: var(--bs-primary);
-    --bs-btn-hover-bg: var(--bs-primary);
-    --bs-btn-hover-border-color: var(--bs-primary);
-    --bs-btn-active-bg: var(--bs-primary);
-    --bs-btn-active-border-color: var(--bs-primary);
-    --bs-btn-disabled-bg: var(--bs-primary);
-    --bs-btn-disabled-border-color: var(--bs-primary);
+    --bs-btn-bg: var(
+    --bs-primary);
+    --bs-btn-border-color: var(
+    --bs-primary);
+    /* --bs-btn-hover-bg: var(--bs-primary); */
+    /* --bs-btn-hover-border-color: var(
+    --bs-primary); */
+    /* --bs-btn-active-bg: var(
+    --bs-primary); */
+    /* --bs-btn-active-border-color: var(
+    --bs-primary); */
+    --bs-btn-disabled-bg: var(
+    --bs-primary);
+    --bs-btn-disabled-border-color: var(
+    --bs-primary);
 }
 
 /*button*/
@@ -497,8 +504,11 @@ th:last-child {
     color: var(--bs-body-color);
 }
 
-table img {
+.circle-image-block{
     margin-right: -12px;
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
 }
 
 .input-group-text {
@@ -626,4 +636,14 @@ table img {
     h3 {
         font-size: 20px;
     }
+}
+.btn-outline-secondary {
+    --bs-btn-color: var(--bs-secondary2);
+    --bs-btn-border-color: var(--bs-secondary2);
+    --bs-btn-hover-bg: var(--bs-secondary2);
+    --bs-btn-hover-border-color: var(--bs-secondary2);
+    --bs-btn-active-bg: var(--bs-secondary2);
+    --bs-btn-active-border-color: var(--bs-secondary2);
+    --bs-btn-disabled-color: var(--bs-secondary2);
+    --bs-btn-disabled-border-color: var(--bs-secondary2);
 }
